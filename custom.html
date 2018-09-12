@@ -1,0 +1,35 @@
+<!-- Custom marker example -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Hello!</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/style.css">
+    <script src="https://aframe.io/releases/0.6.0/aframe.min.js"></script>
+    <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
+  </head>
+  <body>
+
+    <a-scene embedded arjs="sourceType: webcam;" antialias="true">
+      
+      <!-- Create a anchor to attach your augmented reality -->
+      <!--<a-anchor hit-testing-enabled="true">-->
+      <a-marker preset="pattern" type="pattern" url="https://cdn.glitch.com/6a67cbd3-7051-4948-a111-67c7f9a36645%2Fpattern-marker.patt?1536761082471" size="1">
+
+        <!-- Add your augmented reality here -->
+        <a-box position="0 0.5 0" material="opacity: 0.5; side:double; color:red;">
+          <a-torus-knot radius="0.26" radius-tubular="0.05">
+            <a-animation attribute="rotation" to="360 0 0" dur="5000" easing="linear" repeat="indefinite"></a-animation>
+          </a-torus-knot>
+        </a-box>
+
+      </a-marker>
+      <!--</a-anchor>-->
+
+      <a-entity camera></a-entity>
+
+    </a-scene>
+  </body>
+</html>
